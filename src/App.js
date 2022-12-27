@@ -16,7 +16,7 @@ function App() {
   };
   //async deleting
   async function deleteTasks(task) {
-    const Id = (element) => element == task;
+    const Id = (element) => element === task;
     console.log(Tasks.findIndex(Id));
     await Tasks.splice(Tasks.findIndex(Id), 1);
     setTasks(Tasks);
